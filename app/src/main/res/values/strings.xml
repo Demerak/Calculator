@@ -13,12 +13,12 @@
     <string name="nine">9</string>
 
     <string name="dot">.</string>
-    <string name="TODO">TODO</string>
+    <string name="TODO">td</string>
     <string name="ANS">ANS</string>
     <string name="equals">=</string>
     <string name="addition">+</string>
     <string name="substraction">-</string>
-    <string name="multiplication">x</string>
+    <string name="multiplication">×</string>
     <string name="divison">÷</string>
     <string name="DEL">DEL</string>
     <string name="AC">AC</string>
