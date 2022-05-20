@@ -36,18 +36,43 @@ public class MainActivity extends AppCompatActivity {
         String strPrev = display.getText().toString();
         String strLeft = strPrev.substring(0, cursorPosition);
         String strRight = strPrev.substring(cursorPosition);
-        display.setText(String.format("%s%s%s", strLeft, Integer.toString(value),strRight));
+        if (getString(R.string.display).equals(display.getText().toString())) {
+            display.setText(Integer.toString(value));
+        } else {
+            display.setText(String.format("%s%s%s", strLeft, Integer.toString(value),strRight));
+        }
         display.setSelection(cursorPosition+1);
+
     }
 
     public void onClickDel(View view) {
         int cursorPosition = display.getSelectionStart();
         String strPrev = display.getText().toString();
-        if (strPrev.length() != 0) {
+        if (strPrev.length() != 0 & cursorPosition != 0) {
             String strLeft = strPrev.substring(0, cursorPosition-1);
             String strRight = strPrev.substring(cursorPosition);
             display.setText(String.format("%s%s", strLeft, strRight));
             display.setSelection(cursorPosition-1);
         }
     }
+
+    public void onClickAC(View view) {
+        display.setText("");
+    }
+
+    public void onClickOperation(View view) {
+        Button b = (Button)view;
+        String op = b.getText().toString();
+        int cursorPosition = display.getSelectionStart();
+        String strPrev = display.getText().toString();
+        String strLeft = strPrev.substring(0, cursorPosition);
+        String strRight = strPrev.substring(cursorPosition);
+        if (getString(R.string.display).equals(display.getText().toString())) {
+            display.setText(op);
+        } else {
+            display.setText(String.format("%s%s%s", strLeft,op,strRight));
+        }
+        display.setSelection(cursorPosition+1);
+    }
+
 }

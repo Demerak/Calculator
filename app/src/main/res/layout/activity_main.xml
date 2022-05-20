@@ -77,13 +77,14 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="#FF5503"
+                android:onClick="onClickAC"
                 android:text="@string/AC"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:background="@drawable/circle"
-                android:layout_margin="5dp"
-                android:backgroundTint="#FF5503" />
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
@@ -134,24 +135,26 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/multiplication"
-                android:textSize="20sp"
-                android:textColor="@color/black"
                 android:background="@drawable/circle"
-                android:layout_margin="5dp" />
+                android:onClick="onClickOperation"
+                android:text="@string/multiplication"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/divBTN"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/divison"
-                android:textSize="20sp"
-                android:textColor="@color/black"
                 android:background="@drawable/circle"
-                android:layout_margin="5dp" />
+                android:onClick="onClickOperation"
+                android:text="@string/divison"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
@@ -202,24 +205,26 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/addition"
-                android:textSize="20sp"
-                android:textColor="@color/black"
                 android:background="@drawable/circle"
-                android:layout_margin="5dp" />
+                android:onClick="onClickOperation"
+                android:text="@string/addition"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/subBTN"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/substraction"
-                android:textSize="20sp"
-                android:textColor="@color/black"
                 android:background="@drawable/circle"
-                android:layout_margin="5dp" />
+                android:onClick="onClickOperation"
+                android:text="@string/substraction"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow
@@ -281,12 +286,12 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/equals"
-                android:textSize="20sp"
-                android:textColor="@color/black"
                 android:background="@drawable/circle"
-                android:layout_margin="5dp" />
+                android:text="@string/equals"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </TableRow>
     </TableLayout>
 
