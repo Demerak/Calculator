@@ -17,14 +17,14 @@ import javax.script.ScriptException;
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
-    private ScriptEngine engine;
+    public Evaluator eval;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        engine = new ScriptEngineManager().getEngineByName("rhino");
+        eval = new Evaluator();
 
         display = findViewById(R.id.display);
         display.setShowSoftInputOnFocus(false);
@@ -88,9 +88,7 @@ public class MainActivity extends AppCompatActivity {
             String onScreen = display.getText().toString();
             onScreen = onScreen.replace("×", "*");
             onScreen = onScreen.replace("÷", "/");
-            BigDecimal decimal = new BigDecimal(engine.eval(onScreen).toString());
-            String result = decimal.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString();
-            display.setText(result);
+            display.setText(eval.evaluate(onScreen));
         } catch (ScriptException e) {
             display.setText("Error");
         }
